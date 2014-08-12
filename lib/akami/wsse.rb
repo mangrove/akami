@@ -163,7 +163,7 @@ module Akami
       end
 
       if signature?
-        sec_hash[:attributes!].merge!("soapenv:mustUnderstand" => "1")
+        # sec_hash[:attributes!].merge!("soapenv:mustUnderstand" => "1")
       else
         sec_hash["wsse:Security"].merge!(:attributes! => { key => { "wsu:Id" => "#{tag}-#{count}", "xmlns:wsu" => WSU_NAMESPACE } })
       end
